@@ -1,0 +1,1 @@
+git diff  // differences between local and cached areas (staged / git add)
