@@ -1,0 +1,2 @@
+shift + z + z  // save and quit
+shift + z + q // not save and quit
