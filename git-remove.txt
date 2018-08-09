@@ -1,0 +1,9 @@
+rm file    // remove file from local only
+
+git rm file   // remove from commited and local
+
+git rm -f file   // remove from commited and local and staged
+
+如果本地代码进行了修改 并且加入到暂存区 
+(1)执行git rm file 会报错 提醒暂存区里面还有这个文件的修改内容 可以使用 git rm -f file
+(2)执行rm file 会删除本地文件 暂存区得修改还在 还可以提交
