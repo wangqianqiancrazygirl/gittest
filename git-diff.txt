@@ -1,1 +1,4 @@
 git diff  // differences between local and cached areas (staged / git add)
+
+git diff --cached // differences between  cached areas and commited
+git diff --staged // differences between  cached areas and commited £¨git 1.6.1£©
