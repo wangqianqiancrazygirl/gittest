@@ -1,3 +1,6 @@
 git commit -m "info" // commit added file
 
+git commit -m ¡°info¡±file // commit only this file
+
 git commit -a -m "info" // commit track file £¨local change has not add again. but added before£©
+

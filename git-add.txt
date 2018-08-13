@@ -1,4 +1,4 @@
-git add
+git add + file / file route   // if use file route. it will add this route all files.
 git modify
 
 git add

@@ -1,2 +1,9 @@
-shift + z + z  // save and quit
-shift + z + q // not save and quit
+¿ì½İ¼ü:
+shift + z + z     // save and quit
+shift + z + q    // not save and quit
+
+ÃüÁî±à¼­:
+:q     // not save and quit
+:q!    // not save and must quit
+:wq  // save and quit. no matter whether the content is changed or not.
+:x     // save and quit. if content is not changed, it will be not change time.
