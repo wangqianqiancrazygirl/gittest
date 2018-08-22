@@ -1,1 +1,32 @@
 git commit --amend  // 有时我们提交完才发现漏掉了几个文件没有加 或者提交信息写错了 想要撤销刚才得提交操作 可以使用 --amend选项重新提交
+
+(此命令将使用当前的暂存区域快照提交。如果刚才提交完没有作任何改动，直接运行此命令的话，相当于有机会重新编辑提交说明，但将要提交的文件快照和之前的一样。
+
+启动文本编辑器后，会看到上次提交时的说明，编辑它确认没问题后保存退出，就会使用新的提交说明覆盖刚才失误的提交。)
+
+git commit -m "info"
+git add forgotten_file
+git commit --ammend
+
+
+操作步骤:  （针对提交信息有问题或者不全）
+1. git status 查看状态
+2. git commit -m "info"
+3. git commit --ammend 进入vim 重新填写提交信息
+4. git push
+
+
+另一种:
+1. git status 查看状态
+2. git commit -m "info"
+3. git push
+4. git commit --ammend 进入vim 重新填写提交信息
+4. git pull （merge） 本地跟服务器不一样 需要merge
+5. git push
+
+操作步骤:  （针对忘记提交一些文件）
+1. git status 查看状态
+2. git commit -m "info"
+3. git add forgotten_file
+4. git commit --ammend 进入vim 重新填写提交信息
+5. git push
