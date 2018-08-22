@@ -6,13 +6,13 @@ git commit --amend  // 有时我们提交完才发现漏掉了几个文件没有加 或者提交信息写错
 
 git commit -m "info"
 git add forgotten_file
-git commit --ammend
+git commit --amend
 
 
 操作步骤:  （针对提交信息有问题或者不全）
 1. git status 查看状态
 2. git commit -m "info"
-3. git commit --ammend 进入vim 重新填写提交信息
+3. git commit --amend 进入vim 重新填写提交信息
 4. git push
 
 
@@ -20,7 +20,7 @@ git commit --ammend
 1. git status 查看状态
 2. git commit -m "info"
 3. git push
-4. git commit --ammend 进入vim 重新填写提交信息
+4. git commit --amend 进入vim 重新填写提交信息
 4. git pull （merge） 本地跟服务器不一样 需要merge
 5. git push
 
@@ -28,5 +28,7 @@ git commit --ammend
 1. git status 查看状态
 2. git commit -m "info"
 3. git add forgotten_file
-4. git commit --ammend 进入vim 重新填写提交信息
+4. git commit --amend 进入vim 重新填写提交信息
 5. git push
+
+（上面的5条命令最终只是产生一个提交，第二个提交命令修正了第一个的提交内容。）
