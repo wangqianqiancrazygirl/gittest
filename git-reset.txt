@@ -1,4 +1,7 @@
 git reset HEAD file    // 撤销暂存区中的文件
+git reset HEAD   // 撤销暂存区中的所有文件
+git reset HEAD .   // 撤销暂存区中的所有文件
+git reset HEAD *    // 撤销暂存区中的所有文件
 
 (有两个修改过的文件，我们想要分开提交，但不小心用 git add . 全加到了暂存区域。可以使用 git reset HEAD <file>... 的方式取消暂存。)
 
