@@ -20,10 +20,10 @@ if you want quit. enter the "q" key.
 // 你可以给出各种时间格式，比如说具体的某一天（“2008-01-15”），或者是多久以前（“2 years 1 day 3 minutes ago”）。
 
 5.8 git log --author authorName  // only see the author commited
-eg: git log -- author  wangqianqian123  // add "" also can show
+eg: git log --author  wangqianqian123  // add "" also can show
 
 5.9 git log --grep "filterInfo"   // filter info from commited info
-eg: git log -- grep "remove"
+eg: git log --grep "remove"
 
  git log --author wangqianqian123 --grep "remove" --all-match
 // 用 --author 选项显示指定作者的提交，用 --grep 选项搜索提交说明中的关键字。（请注意，如果要得到同时满足这两个选项搜索条件的提交，就必须用 --all-match 选项。否则，满足任意一个条件的提交都会被匹配出来）
