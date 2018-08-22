@@ -7,3 +7,6 @@ shift + z + q    // not save and quit
 :q!    // not save and must quit
 :wq  // save and quit. no matter whether the content is changed or not.
 :x     // save and quit. if content is not changed, it will be not change time.
+
+插入信息: i
+写完信息后按esc退出插入模式 保存退出
