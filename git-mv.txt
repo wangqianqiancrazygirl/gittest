@@ -1,0 +1,6 @@
+git mv file_from file_to  // file route 
+
+// 1. git rm -f file
+// 2. git add newFile
+
+eg: git mv ./remove/changed.txt ./remove/b.txt
