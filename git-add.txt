@@ -1,11 +1,13 @@
 git add + file / file route   // if use file route. it will add this route all files.
-git modify
+git add .    // git add 空格. 把已修改的都添加到暂存区
+modify
 
 git add
-git modify
+modify
 git commit -m "info"     // commit first modify
 
 git add
 git commit -m "info" // commit second modify
 
 git commit -a -m "info" // the add command can be omitted. commit all track file
+
