@@ -7,6 +7,8 @@ git rm -f file   // remove from commited and local and staged
 如果本地代码进行了修改 并且加入到暂存区 
 (1)执行git rm file 会报错 提醒暂存区里面还有这个文件的修改内容 可以使用 git rm -f file
 (2)执行rm file 会删除本地文件 暂存区得修改还在 还可以提交
+(3) 执行git rm --cached file 会报错 说和本地服务器都不一样 (the following file has staged content different from both the
+file and the HEAD:)
 
 git rm --cached file  // not delete from local. but remove from staged and commited. make file untracked.
 (has no git rm --staged file command)

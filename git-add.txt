@@ -1,4 +1,5 @@
-git add + file / file route   // if use file route. it will add this route all files.
+git add <file> / <file_route>   // if use file route. it will add this route all files.
+git add <file> <file>  // 可以添加两个以上 文件 并列写就可以 中间用空格分隔
 git add .    // git add 空格. 把已修改的都添加到暂存区
 modify
 
