@@ -2,3 +2,15 @@
 
 *.[ao]
 *.#
+[diff]
+tool = bc3
+[difftool]
+prompt = false
+[difftool "bc3"]
+cmd = "\"D:/\software/Beyond Compare 3/BCompare.exe\" \"$LOCAL\" \"$REMOTE\""
+[merge]
+tool = bc
+[mergetool]
+prompt = false
+[mergetool "bc3"]
+cmd = "\"D:/\software/Beyond Compare 3/BCompare.exe\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\""
