@@ -4,15 +4,21 @@
 *.#
 
 
+#使用beyond compare来查看文件差异
 [diff]
+#对比工具名称,必须与difftool项里的名称保持一致
 tool = bc4
-[difftool]
-prompt = false
 [difftool "bc4"]
-cmd = "\"D:/Program Files/Beyond Compare 4/BCompare.exe\" \"$LOCAL\" \"$REMOTE\""
+#beyond compare路径和调用命令
+#$REMOTE 表示commit之后的文件
+#LOCAL 表示commit到git的文件
+cmd = "\"D:/Program Files/Beyond Compare 4/BCompare.exe\" \"$REMOTE\" \"$LOCAL\""
+#合并分支
 [merge]
-tool = bc
+#对比工具名称,必须与mergetool项里的名称保持一致
+tool = bc4
 [mergetool]
 prompt = false
 [mergetool "bc4"]
+#beyond compare路径和调用命令
 cmd = "\"D:/Program Files/Beyond Compare 4/BCompare.exe\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\""
