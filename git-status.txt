@@ -1,0 +1,3 @@
+git status  查看状态 
+git status -s 查看状态 简化版 
+git status -short 查看状态 简化版 
