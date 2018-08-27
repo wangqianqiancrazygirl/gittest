@@ -1,0 +1,5 @@
+1. echo "ignore-regexp" >.gitignore   // 把.gitignore文件中的内容删除 添加新规则
+
+eg: echo "*.a" >.gitingore
+
+2. echo "ignore-regexp" >>.gitignore // 不删除原内容 末尾添加新规则
