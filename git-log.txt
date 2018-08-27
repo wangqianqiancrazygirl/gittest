@@ -31,6 +31,14 @@ eg: git log --grep "remove"
 5.20 git log --author wangqianqian123 --before "2018-08-14" --空格fileRoute
 eg:  git log --author wangqianqian123 --before "2018-08-14" --remove/      // "/" has and also not has
 
+最后一个很实用的git	log选项是路径(path)，如果只关心某些文件或者目录的历史提交， 可以在git log选项的最后指定它们的路径。	因为是放在最后位置上的选项，所以用两个短划 线（--）隔开之前的选项和后面限定的路径名。
+
+5.21 $git log -S<string>  // 可以列出那些添加或移除了某些字符串的提交。
+比如 说，你想找出添加或移除了某一个特定函数的引用的提交，你可以这样使用：
+$git log -Sbeyond
+
+5.22 
+
 表 2-1 列出了常用的格式占位符写法及其代表的意义。
 选项 说明
     %H 提交对象（commit）的完整哈希字串
