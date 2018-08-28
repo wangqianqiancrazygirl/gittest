@@ -1,9 +1,60 @@
 1. git branch <branch-name>   // ÐÂ½¨Ò»¸ö·ÖÖ§ (HEADÖ¸Ïòmaster)
 
-2. git checkout  <branch -name>   // ÇÐ»»·ÖÖ§  (ÕâÑùHEAD¾ÍÖ¸Ïòtesting·ÖÖ§ÁË)
+2. git checkout  <branch -name>   // ÇÐ»»·ÖÖ§  (ÕâÑùHEAD¾ÍÖ¸Ïòtesting·ÖÖ§ÁË)   £¨ÇÐ»»·ÖÖ®Ç° ×îºÃ±£Ö¤¸É¾»£©
 
 /**
  *  HEADÖ¸Ïòµ±Ç°ËùÔÚµÄ·ÖÖ§ 
  */
 
-3. git checkout -b <branch-name>  // ¿¿¿¿¿¿¿¿¿
+3. git checkout -b <branch-name>  // ´´½¨ÐÂ·ÖÖ§²¢ÇÒÖ±½ÓÇÐ»»µ½¸Ã·ÖÖ§
+
+// git branch <branch-name>
+// git checkout <branch-name>   
+
+4. git merge <branch-name>   // ºÏ²¢¸Ã·ÖÖ§µ½µ±Ç°ËùÔÚ·ÖÖ§
+
+£¨ÔÚºÏ²¢µÄÊ±ºò£¬ÄãÓ¦¸Ã×¢Òâµ½ÁË"¿ì½ø£¨fast-forward£©"Õâ¸ö´Ê¡£ÓÉÓÚµ±Ç°master·ÖÖ§ËùÖ¸ ÏòµÄÌá½»ÊÇÄãµ±Ç°Ìá½»£¨ÓÐ¹ØhotfixµÄÌá½»£©µÄÖ±½ÓÉÏÓÎ£¬ËùÒÔGitÖ»ÊÇ¼òµ¥µÄ½«Ö¸ÕëÏòÇ°ÒÆ ¶¯¡£»»¾ä»°Ëµ£¬µ±ÄãÊÔÍ¼ºÏ²¢Á½¸ö·ÖÖ§Ê±£¬Èç¹ûË³×ÅÒ»¸ö·ÖÖ§×ßÏÂÈ¥ÄÜ¹»µ½´ïÁíÒ»¸ö·ÖÖ§£¬ ÄÇÃ´GitÔÚºÏ²¢Á½ÕßµÄÊ±ºò£¬Ö»»á¼òµ¥µÄ½«Ö¸ÕëÏòÇ°ÍÆ½ø£¨Ö¸ÕëÓÒÒÆ£©£¬ÒòÎªÕâÖÖÇé¿öÏÂµÄºÏ ²¢²Ù×÷Ã»ÓÐÐèÒª½â¾öµÄ·ÖÆç¡ª¡ªÕâ¾Í½Ð×ö¡°¿ì½ø£¨fast-forward£©¡±¡££©
+
+5.git branch -d <branch-name>  // É¾³ý¸Ã·ÖÖ§
+
+6. git branch  // ²é¿´ËùÓÐ·ÖÖ§ÁÐ±í
+
+£¨×¢Òâmaster·ÖÖ§Ç°µÄ*×Ö·û£ºËü´ú±íÏÖÔÚ¼ì³öµÄÄÇÒ»¸ö·ÖÖ§£¨Ò²¾ÍÊÇËµ£¬µ±Ç°HEADÖ¸ ÕëËùÖ¸ÏòµÄ·ÖÖ§£©¡£	ÕâÒâÎ¶×ÅÈç¹ûÔÚÕâÊ±ºòÌá½»£¬master·ÖÖ§½«»áËæ×ÅÐÂµÄ¹¤×÷ÏòÇ°ÒÆ ¶¯¡££©
+
+7. git branch -v	// ÁÐ³öËùÓÐ·ÖÖ§ ÒÔ¼°Ã¿Ò»¸ö·ÖÖ§µÄ×îºóÒ»´ÎÌá½»
+
+8. git branch --merged   // ²é¿´ºÏ²¢µ½µ±Ç°·ÖÖ§µÄ·ÖÖ§
+
+£¨ÔÚÕâ¸öÁÐ±íÖÐ·ÖÖ§Ãû×ÖÇ°Ã» ÓÐ	*ºÅµÄ·ÖÖ§Í¨³£¿ÉÒÔÊ¹ÓÃgit branch -d É¾³ýµô£»ÄãÒÑ¾­½«ËüÃÇµÄ¹¤×÷ÕûºÏµ½ÁËÁíÒ»¸ö ·ÖÖ§£¬ËùÒÔ²¢²»»áÊ§È¥ÈÎºÎ¶«Î÷¡££©
+
+9. git branch --no-merged
+
+ (Ã»ºÏ²¢µÄÒ»°ã¶¼ÊÇÕýÔÚ½øÐÐµÄ¹¦ÄÜ»òÕßÐèÇó »¹Ã»ÓÐÍê³É Ê¹ÓÃ git branch -d <branch-name> ²»ÄÜÉ¾³ý
+³ý·ÇÊÇÕû¸öÐèÇó²»ÒªÁË É¾³ýÕû¸ö·ÖÖ§ git branch -D <branch-name>)
+
+Óöµ½³åÍ»Ê±µÄ·ÖÖ§ºÏ²¢ 
+
+ÓÐÊ±ºòºÏ²¢²Ù×÷²»»áÈç´ËË³Àû¡£Èç¹ûÄãÔÚÁ½¸ö²»Í¬µÄ·ÖÖ§ÖÐ£¬¶ÔÍ¬Ò»¸öÎÄ¼þµÄÍ¬Ò»¸ö²¿·Ö½ø ÐÐÁË²»Í¬µÄÐÞ¸Ä£¬Git¾ÍÃ»·¨¸É¾»µÄºÏ²¢ËüÃÇ¡£Èç¹ûÄã¶Ô#53ÎÊÌâµÄÐÞ¸ÄºÍÓÐ¹ØhotfixµÄ ÐÞ¸Ä¶¼Éæ¼°µ½Í¬Ò»¸öÎÄ¼þµÄÍ¬Ò»´¦£¬ÔÚºÏ²¢ËüÃÇµÄÊ±ºò¾Í»á²úÉúºÏ²¢³åÍ»£º
+$git merge iss53 
+Auto-merging index.html 
+CONFLICT(content):Merge conflict in index.html 
+Automatic merge failed; fix conflicts and then commit the result.
+´ËÊ±Git×öÁËºÏ²¢£¬µ«ÊÇÃ»ÓÐ×Ô¶¯µØ´´½¨Ò»¸öÐÂµÄºÏ²¢Ìá½»¡£Git»áÔÝÍ£ÏÂÀ´£¬µÈ´ýÄãÈ¥½â¾ö ºÏ²¢²úÉúµÄ³åÍ»¡£Äã¿ÉÒÔÔÚºÏ²¢³åÍ»ºóµÄÈÎÒâÊ±¿ÌÊ¹ÓÃgitstatusÃüÁîÀ´²é¿´ÄÇÐ©Òò°üº¬ ºÏ²¢³åÍ»¶ø´¦ÓÚÎ´ºÏ²¢£¨unmerged£©×´Ì¬µÄÎÄ¼þ£º
+$git status 
+On branch master You have unmerged paths.(fix conflicts and run "git commit")
+Unmerged paths:(use"git add <file>..."to mark resolution)
+both modified:index.html
+no changes added to commit(use"git add "and/or" git commit -a")
+ÈÎºÎÒò°üº¬ºÏ²¢³åÍ»¶øÓÐ´ý½â¾öµÄÎÄ¼þ£¬¶¼»áÒÔÎ´ºÏ²¢×´Ì¬±êÊ¶³öÀ´¡£Git»áÔÚÓÐ³åÍ»µÄÎÄ¼þ ÖÐ¼ÓÈë±ê×¼µÄ³åÍ»½â¾ö±ê¼Ç£¬ÕâÑùÄã¿ÉÒÔ´ò¿ªÕâÐ©°üº¬³åÍ»µÄÎÄ¼þÈ»ºóÊÖ¶¯½â¾ö³åÍ»¡£³öÏÖ ³åÍ»µÄÎÄ¼þ»á°üº¬Ò»Ð©ÌØÊâÇø¶Î£¬¿´ÆðÀ´ÏñÏÂÃæÕâ¸öÑù×Ó£º
+<<<<<<<HEAD:index.html <divid="footer">contact:email.support@github.com</div> ======= <divid="footer">pleasecontactusatsupport@github.com </div> >>>>>>>iss53:index.html
+Õâ±íÊ¾HEADËùÖ¸Ê¾µÄ°æ±¾£¨Ò²¾ÍÊÇÄãµÄmaster·ÖÖ§ËùÔÚµÄÎ»ÖÃ£¬ÒòÎªÄãÔÚÔËÐÐmergeÃü ÁîµÄÊ±ºòÒÑ¾­¼ì³öµ½ÁËÕâ¸ö·ÖÖ§£©ÔÚÕâ¸öÇø¶ÎµÄÉÏ°ë²¿·Ö£¨=======µÄÉÏ°ë²¿·Ö£©£¬¶øiss53·ÖÖ§ËùÖ¸Ê¾µÄ°æ±¾ÔÚ=======µÄÏÂ°ë²¿·Ö¡£ÎªÁË½â¾ö³åÍ»£¬Äã±ØÐëÑ¡ÔñÊ¹ÓÃÓÉ=======·Ö¸îµÄÁ½²¿·ÖÖÐµÄÒ»¸ö£¬»òÕßÄãÒ²¿ÉÒÔ×ÔÐÐºÏ²¢ÕâÐ©ÄÚÈÝ¡£ÀýÈç£¬Äã¿ÉÒÔÍ¨¹ý°ÑÕâ ¶ÎÄÚÈÝ»»³ÉÏÂÃæµÄÑù×ÓÀ´½â¾ö³åÍ»£º
+·ÖÖ§µÄÐÂ½¨ÓëºÏ²¢
+82
+<divid="footer"> pleasecontactusatemail.support@github.com </div>
+ÉÏÊöµÄ³åÍ»½â¾ö·½°¸½ö±£ÁôÁËÆäÖÐÒ»¸ö·ÖÖ§µÄÐÞ¸Ä£¬²¢ÇÒ<<<<<<<,=======,ºÍ>>>>>>>ÕâÐ©ÐÐ±»ÍêÈ«É¾³ýÁË¡£ÔÚÄã½â¾öÁËËùÓÐÎÄ¼þÀïµÄ³åÍ»Ö®ºó£¬¶ÔÃ¿¸öÎÄ¼þÊ¹ÓÃgitaddÃüÁîÀ´ ½«Æä±ê¼ÇÎª³åÍ»ÒÑ½â¾ö¡£Ò»µ©ÔÝ´æÕâÐ©Ô­±¾ÓÐ³åÍ»µÄÎÄ¼þ£¬Git¾Í»á½«ËüÃÇ±ê¼ÇÎª³åÍ»ÒÑ½â ¾ö¡£
+
+
+
+
+
+·ÖÖ§ÇÐ»»»á¸Ä±äÄã¹¤×÷Ä¿Â¼ÖÐµÄÎÄ¼þ ÔÚÇÐ»»·ÖÖ§Ê±£¬Ò»¶¨Òª×¢ÒâÄã¹¤×÷Ä¿Â¼ÀïµÄÎÄ¼þ»á±»¸Ä±ä¡£Èç¹ûÊÇÇÐ»»µ½Ò»¸ö½Ï ¾ÉµÄ·ÖÖ§£¬ÄãµÄ¹¤×÷Ä¿Â¼»á»Ö¸´µ½¸Ã·ÖÖ§×îºóÒ»´ÎÌá½»Ê±µÄÑù×Ó¡£Èç¹ûGit²»ÄÜ ¸É¾»ÀûÂäµØÍê³ÉÕâ¸öÈÎÎñ£¬Ëü½«½ûÖ¹ÇÐ»»·ÖÖ§¡£
