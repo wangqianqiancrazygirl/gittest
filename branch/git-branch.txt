@@ -3,5 +3,7 @@
 2. git checkout  <branch -name>   // ÇĞ»»·ÖÖ§  (ÕâÑùHEAD¾ÍÖ¸Ïòtesting·ÖÖ§ÁË)
 
 /**
- *  HEADÖ¸Ïòµ±Ç°·ÖÖ§
+ *  HEADÖ¸Ïòµ±Ç°·Ö <branch-name>  // ¿¿¿¿¿¿¿¿¿¿¿
  */
+
+3. git checkout -b <branch-name>  // ¿¿¿¿¿¿¿¿¿
