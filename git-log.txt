@@ -37,6 +37,12 @@ eg:  git log --author wangqianqian123 --before "2018-08-14" --remove/      // "/
 比如 说，你想找出添加或移除了某一个特定函数的引用的提交，你可以这样使用：
 $git log -Sbeyond
 
+5.22 git log --oneline  // 提交信息显示一行
+
+5.23 git log --decorate   // 查看各个分支当前所指的对象
+
+eg: git log ---oneline --decorate   // 经常这么用
+
 5.22 
 
 表 2-1 列出了常用的格式占位符写法及其代表的意义。
