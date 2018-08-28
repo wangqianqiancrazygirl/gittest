@@ -1,0 +1,9 @@
+1. git branch <branch-name>   // 新建一个分支 (HEAD指向master)
+
+2. git checkout  <branch -name>   // 切换分支  (这样HEAD就指向testing分支了)
+
+/**
+ *  HEAD指向当前所在的分支 
+ */
+
+3. 分叉
