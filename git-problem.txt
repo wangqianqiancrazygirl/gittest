@@ -1,0 +1,21 @@
+fatal：HttpRequestException encountered
+
+通过此网址https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/
+下载GCMV-1.15.0.exe  （版本可能有变）
+
+下载之后安装重启git窗口 
+$ git remote add origin https://github.com/qingshahguyan/testgit.git 
+qingshahguyan是你的用户名testgit是你自己建的 repository名称 
+$ git remote rm origin 
+出现 
+**$ git push -u origin master 
+Counting objects: 6, done. 
+Delta compression using up to 8 threads. 
+Compressing objects: 100% (4/4), done. 
+Writing objects: 100% (6/6), 688 bytes | 344.00 KiB/s, done. 
+Total 6 (delta 2), reused 0 (delta 0) 
+remote: Resolving deltas: 100% (2/2), done. 
+To https://github.com/qingshahguyan/testgit.git 
+* [new branch] master -> master 
+** 
+就可以了，说明你的git和github已经可以同步了
