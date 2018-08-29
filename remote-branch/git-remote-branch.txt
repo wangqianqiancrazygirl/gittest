@@ -1,0 +1,5 @@
+1. git remote / git remote show / git remote -v
+
+1. git remote show <remote-name>   // 获取远程分支的更多信息
+
+2. git ls-remote <remote-name>  // 显示的获取远程引用的完整列表
