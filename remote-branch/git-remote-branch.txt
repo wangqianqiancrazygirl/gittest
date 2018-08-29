@@ -12,5 +12,21 @@ origin''	并无特殊含义 远程仓库名字origin''与分支名字master''一样，在	Git中并没有
 3. git push origin <local-branch-name>  // 推送新分支 服务器上的分支名与本地相同
     git push origin <local-branch-name>:<branch-name>   // 推送新分支 服务器上的分支名创建新得
 
+eg: git push origin serverfix
+
 (如果想让别人看见这个分支 能够在这个分支上工作 可以推送新分支到服务器上 服务器上的分支名可以自定义 如果不需要就与本地分支名相同）
+
+4.  git fetch origin
+下一次其他协作者从服务器上抓取数据时，他们会在本地生成一个远程分支origin/serverfix，指向服务器的serverfix	分支的引用.
+
+要特别注意的一点是当抓取到新的远程跟踪分支时，本地不会自动生成一份可编辑的副本 （拷贝）。换一句话说，这种情况下，不会有一个新的serverfix分支-只有一个不可以修改的origin/serverfix指针。
+
+5. git merge origin/serverfix 
+可以运行git merge origin/serverfix 将这些工作合并到当前所在的分支。
+6. git checkout -b serverfix origin/serverfix 如果想要在自己 的serverfix分支上工作，可以将其建立在远程跟踪分支之上：
+这会给你一个用于工作的本地分支，并且起点位于origin/serverfix。
+
+
+
+
 
