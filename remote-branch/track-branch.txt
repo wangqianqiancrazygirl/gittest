@@ -1,0 +1,34 @@
+1. git checkout -b <local-branch-name> <remote-name>/<branch-name>  // 切换分支并且跟踪这个分支  git push 会提交到该分支上
+
+当克隆一个仓库时，它通常会自动地创建一个跟踪origin/master	的master分支。然而， 如果你愿意的话可以设置其他的跟踪分支	-	其他远程仓库上的跟踪分支，或者不跟踪master分支。
+
+2. git checkout --track <remote-name>/<branch-name>   // 从服务器上抓取新分支 切换到该分支 并且Git push 默认提交到这个分支上	
+
+3. git checkout -b <local-branch-name> --track <remote-name>/<branch-name>   // 创建一个名为<local-branch-name>的分支 
+如果想要将本地分支与远程分支设置为不同名字，你可以轻松地增加一个不同名字的本地分 支的上一个命令：
+现在，本地分支<local-branch-name>会自动从<remote-name>/<branch-name>拉取。
+
+4. git branch -u origin/serverfix 
+
+设置已有的本地分支跟踪一个刚刚拉取下来的远程分支，或者想要修改正在跟踪的上游分 支，你可以在任意时间使用-u或		--set-upstream-to 选项运行git	branch来显式地设 置。
+
+上游快捷方式 当设置好跟踪分支后，可以通过@{upstream}或@{u}快捷方式来引用它。所 以在master分支时并且它正在跟踪origin/master时，如果愿意的话可以使 用git merge @{u}来取代git merge origin/master。
+
+5. git branch -vv   // 查看设置的所有跟踪分支
+
+这会将所有的本 地分支列出来并且包含更多的信息，如每一个分支正在跟踪哪个远程分支与本地分支是否是 领先、落后或是都有。
+
+
+
+$git branch -vv		
+iss53 7e424c3	[origin/iss53: ahead	2] forgot	the brackets 
+master	 1ae2a45	[origin/master] deploying index fix *
+serverfix	f8674d9	[teamone/server-fix-good: ahead 3, behind 1] this should do it
+testing 5ea463a	trying something new
+这里可以看到iss53分支正在跟踪origin/iss53并且`ahead''是2，意味着本地有两个提交还没 有推送到服务器上。
+也能看到master分支正在跟踪origin/master分支并且是最新的。
+接下来 可以看到serverfix分支正在跟踪teamone服务器上的server-fix-good分支并且领先2 落后	1，意味着服务器上有一次提交还没有合并入同时本地有三次提交还没有推送。	最后看 到testing分支并没有跟踪任何远程分支。
+
+需要重点注意的一点是这些数字的值来自于你从每个服务器上最后一次抓取的数据。	这个命 令并没有连接服务器，它只会告诉你关于本地缓存的服务器数据。	如果想要统计最新的领先 与落后数字，需要在运行此命令前抓取所有的远程仓库。	可以像这样做：	$git fetch	--all; git branch -vv
+
+
