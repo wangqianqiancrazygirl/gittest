@@ -3,3 +3,14 @@
 1. git remote show <remote-name>   // 获取远程分支的更多信息
 
 2. git ls-remote <remote-name>  // 显示的获取远程引用的完整列表
+（远程引用是对远程仓库的引用（指针），包括分支、标签等。你可以通过git ls-remote (remote)来显式地获得远程引用的完整列表）
+
+远程跟踪分支是远程分支状态的引用。它们是你不能移动的本地引用，当你做任何网络通信 操作时，它们会自动移动。	远程跟踪分支像是你上次连接到远程仓库时，那些分支所处状态 的书签。
+
+origin''	并无特殊含义 远程仓库名字origin''与分支名字master''一样，在	Git中并没有任何特别的含 义一样。同时master''是当你运行git init时默认的起始分支名字，原因仅仅是它的广泛使 用，origin''是当你运行git clone时默认的远程仓库名字。如果你运行git clone	-o booyah，那么你默认的远程分支名字将会是booyah/master	。
+
+3. git push origin <local-branch-name>  // 推送新分支 服务器上的分支名与本地相同
+    git push origin <local-branch-name>:<branch-name>   // 推送新分支 服务器上的分支名创建新得
+
+(如果想让别人看见这个分支 能够在这个分支上工作 可以推送新分支到服务器上 服务器上的分支名可以自定义 如果不需要就与本地分支名相同）
+
