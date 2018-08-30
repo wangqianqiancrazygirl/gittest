@@ -1,0 +1,13 @@
+1. git push <remote-name> <branch-name>  // 推送分支
+
+改变上游分支后 
+git checkout <branch-name> --track <remote-name>/<branch-name> 
+
+eg:  
+git checkout local-branch --track origin/new-branch
+此时 当前分支是local-branch 上游分支(也就是远程分支) 是 new -branch
+
+
+push时 ,
+1. git push origin local-branch    // To push to the branch of the same name on the remote,  直接新建一个远程分支推送上去
+2. git push origin HEAD: new-branch   // The upstream branch of your current branch does not match .the name of your current branch.  To push to the upstream branch on the remote,

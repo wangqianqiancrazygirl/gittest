@@ -4,7 +4,8 @@
 
 2. git checkout --track <remote-name>/<branch-name>   // 从服务器上抓取新分支 切换到该分支 并且Git push 默认提交到这个分支上	
 
-3. git checkout -b <local-branch-name> --track <remote-name>/<branch-name>   // 创建一个名为<local-branch-name>的分支 
+3. git checkout -b <local-branch-name> --track <remote-name>/<branch-name>   // 创建一个名为<local-branch-name>的分支   （--track有没有都可以）<branch-name>要在服务器上已有的
+
 如果想要将本地分支与远程分支设置为不同名字，你可以轻松地增加一个不同名字的本地分 支的上一个命令：
 现在，本地分支<local-branch-name>会自动从<remote-name>/<branch-name>拉取。
 
