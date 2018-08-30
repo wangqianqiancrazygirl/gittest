@@ -1,7 +1,10 @@
 1. git push <remote-name> <branch-name>  // 推送分支
 
-改变上游分支后 
-git checkout <branch-name> --track <remote-name>/<branch-name> 
+
+2. git checkout --track <remote-name>/<branch-name> 
+git checkout -b <branch-name> <remote-name>/<branch-name>  // 从服务器上拉取分支 创建本地新分支 切换到当前分支上 跟踪该上游分支
+
+改变上游分支 (当前分支已经创建完成)
 git branch -u origin/serverfix 
 eg:  
 git checkout local-branch --track origin/new-branch
