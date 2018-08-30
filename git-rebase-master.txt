@@ -12,3 +12,47 @@
 请注意，无论是通过变基，还是通过三方合并，整合的最终结果所指向的快照始终是一样 的，只不过提交历史不同罢了。	
 变基是将一系列提交按照原有次序依次应用到另一分支上， 而合并是把最终结果合在一起。
 
+
+3. git rebase --onto	master server client  // 变基client到master上
+
+
+更有趣的变基例子
+
+在对两个分支进行变基时，所生成的“重演”并不一定要在目标分支上应用，你也可以指定另外 的一个分支进行应用。	就像从一个特性分支里再分出一个特性分支的提交历史中的例子这 样。	
+你创建了一个特性分支server，为服务端添加了一些功能，提交了C3和C4。	
+然后 从C3上创建了特性分支client，为客户端添加了一些功能，提交了C8和	C9。	
+最后， 你回到server分支，又提交了C10。
+
+Figure 5.	从一个特性分支里再分出一个特性分支的提交历史 假设你希望将client中的修改合并到主分支并发布，但暂时并不想合server	中的修 改，因为它们还需要经过更全面的测试。	
+这时，你就可以使用git rebase 命令的 --onto 选项，选中在client分支里但不在server分支里的修改
+（即C8和C9），将它们在master分支上重演：
+
+以上命令的意思是：“取出client分支，找出处于client分支和server分支的共同祖先 之后的修改，然后把它们在master	分支上重演一遍”。这理解起来有一点复杂，不过效果非 常酷。
+
+
+Figure	6. 截取特性分支上的另一个特性分支，然后变基到其他分支 现在可以快进合并master分支了。
+（如图快进合并master分支，使之包含来自client分支 的修改）：
+$ git checkout master 
+$ git merge client   // 将指针指向最新提交记录
+
+4. git rebase <basebranch> <topicbranch>
+
+Figure	7. 快进合并master分支，使之包含来自client分支的修改 接下来你决定将server分支中的修改也整合进来。	
+使用git rebase [basebranch] [topicbranch] 命令可以直接将特性分支（即本例中的server）变基到目标分支（即master）上。
+这样做能省去你先切换到server分支，再对其执行变基命令的多个步骤。
+$ git rebase master	server
+
+server中的代码被“续”到了master后 面。
+然后就可以快进合并主分支master了
+git merge	server  // 将指针指向最新提交记录
+
+至此，client和server分支中的修改都已经整合到主分支里去了，你可以删除这两个分 支，最终提交历史会变成图	最终的提交历史	中的样子：
+$ git branch -d client 
+$ git branch -d server
+
+
+
+
+
+
+
