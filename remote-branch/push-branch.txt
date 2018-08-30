@@ -2,7 +2,7 @@
 
 改变上游分支后 
 git checkout <branch-name> --track <remote-name>/<branch-name> 
-
+git branch -u origin/serverfix 
 eg:  
 git checkout local-branch --track origin/new-branch
 此时 当前分支是local-branch 上游分支(也就是远程分支) 是 new -branch
