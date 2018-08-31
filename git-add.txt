@@ -12,3 +12,8 @@ git commit -m "info" // commit second modify
 
 git commit -a -m "info" // the add command can be omitted. commit all track file
 
+
+1. git add --patch   // 依次询问是否添加到暂存区
+
+（如果其中一些改动修改了同一个文件，尝试使用git add --patch来部分暂存文件）
+
