@@ -4,3 +4,4 @@ git commit -m ¡°info¡±file // commit only this file
 
 git commit -a -m "info" // commit track file £¨local change has not add again. but added before£©
 
+git commit -am "info"
