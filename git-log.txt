@@ -43,7 +43,15 @@ $git log -Sbeyond
 
 eg: git log ---oneline --decorate   // 经常这么用
 
-5.22 
+5.24 git log --no-merges  // 查看所有未被合并过的提交信息
+
+5.25 git log --merges  // 查看所有合并过的提交信息
+
+5.26 git log <tag-name>  // 按标签查看
+
+5.27 git log --no-merges <branch-name>..<branch-name>  // 只显示所有在后面分支但不在前面分支的提交的列表
+
+eg: git log --no-merges master test-branch  //  在test-branch上提交了没有在master上提交过的列表
 
 表 2-1 列出了常用的格式占位符写法及其代表的意义。
 选项 说明
